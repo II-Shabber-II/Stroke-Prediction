@@ -42,7 +42,7 @@ It contains 11 features and a target variable (`stroke`) indicating whether the 
 * `gender`, `age`, `hypertension`, `heart_disease`, `ever_married`, `work_type`, `Residence_type`, `avg_glucose_level`, `bmi`, `smoking_status`, `stroke` (target).
 
 ## Project Structure
-
+```
 Stroke-Prediction/
 ├── config/
 │   └── config.yaml             # Configuration file for paths, model parameters
@@ -65,6 +65,7 @@ Stroke-Prediction/
 ├── eda.py                  # Functions for Exploratory Data Analysis
 ├── feature_engineering.py  # Functions for creating/transforming features
 └── model_training.py       # Functions for model building, tuning, evaluation, saving
+```
 
 ## Installation
 
