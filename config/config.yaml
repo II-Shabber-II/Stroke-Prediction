@@ -1,0 +1,45 @@
+# S:\Projects\Stroke-Prediction\config\config.yaml
+
+project_paths:
+  base_dir: "S:\\Projects\\Stroke-Prediction" # Use double backslashes for Windows paths in YAML
+  data_dir_name: "data"
+  models_dir_name: "models"
+  plots_dir_name: "plots"
+
+data_files:
+  raw_data_name: "healthcare-dataset-stroke-data.csv"
+  preprocessed_data_name: "stroke_data_preprocessed.csv"
+  final_processed_data_name: "stroke_data_final_processed.csv"
+
+data_cleaning:
+  drop_columns: ["id"]
+  impute_bmi_strategy: "mean" # Can be "median" or "mean"
+  gender_to_remove: "Other" # The value to filter out in 'gender' column
+  gender_mapping:
+    Male: 0
+    Female: 1
+
+feature_engineering:
+  age_bins: [0, 18, 45, 65, 100]
+  age_labels: ["Child", "Adult", "Middle-aged", "Senior"]
+
+model_params:
+  random_state: 42
+  test_size: 0.2
+  numerical_features: ["age", "avg_glucose_level", "bmi"]
+  target_column: "stroke"
+
+  # Hyperparameters for GridSearchCV
+  logistic_regression:
+    C: [0.01, 0.1, 1, 10, 100]
+    solver: ["liblinear", "saga"]
+  random_forest:
+    n_estimators: [100, 200, 300]
+    max_depth: [5, 10, None]
+  gradient_boosting:
+    n_estimators: [100, 200, 300]
+    learning_rate: [0.01, 0.1, 0.2]
+
+output_model_names:
+  scaler: "scaler.pkl"
+  best_pipeline: "best_stroke_prediction_pipeline.pkl"

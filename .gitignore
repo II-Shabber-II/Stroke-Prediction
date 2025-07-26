@@ -1,0 +1,18 @@
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.env/
+.ipynb_checkpoints
+.mypy_cache/
+.pytest_cache/
+.vscode/ # VS Code specific folder
+
+# Project specific outputs
+/data/
+/models/
+/plots/
+*.log 
