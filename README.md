@@ -58,7 +58,7 @@ Stroke-Prediction/
 │   ├── confusion_matrix_.png  # Confusion matrices for each model
 │   └── feature_importance_.png# Feature importance plots
 └── src/
-├── init.py             # Makes 'src' a Python package
+├── init.py             # Makes 'src' a Python package (corrected name)
 ├── main.py                 # Main execution script for the entire pipeline
 ├── config_manager.py       # Handles loading configuration and setting up paths
 ├── data_ingestion.py       # Functions for loading and initial data cleaning
